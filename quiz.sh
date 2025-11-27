@@ -156,7 +156,11 @@ for LINE in "${QUESTIONS[@]}"; do
         STREAK=0
     fi
 
-    [[ "$MODE" == "practice" ]] && sleep 2 || sleep 1
+if [ "$MODE" = "practice" ]; then
+sleep 2
+else
+sleep 1
+fi
 done
 
 if [[ "$exit_requested" == true ]]; then
