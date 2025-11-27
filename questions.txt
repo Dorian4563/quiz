@@ -1,0 +1,15 @@
+ What is the capital of France?|A) Paris|B) Rome|C) Berlin|D) Madrid|A
+2 + 2 equals?|A) 3|B) 4|C) 22|D) 8|B
+who is the oldest president?|A) paul biya|B) macron|C) vladimir putin|D) donal trump|A
+what is the color of a banana?|A) red|B) yellow|C) white|D) blue|B 
+how many days are there in a week?|A) 14|B) 7|C) 77|D) 6|B
+what do you call a baby cat?|A) kitten|B) rat|C) puppy|D)human|A
+what is the capital of canada?|A) spain|B) France|C) ottawa|D) united states|C 
+what city is know as "the Eternal city"?|A) Rome|B) france|C) cameroon|D) italy|A 
+what animal known to "laugh" when tickled?|A) rat|B) dog|C) cat|D) sheep|A 
+in what country is common to find square watermelon?|A) cameroon|B) japan|C) France|D) spain|B 
+what is the name of molten rock after a volcanic eruption?|A) lava|B) soil|C) rocks|D) volcanic|A 
+which space telescope was launched by nasa in 1990?|A) telescope hubble|B) telescope|C) hubble space telescope|D) space X|C 
+what does the command "ls" do?|A) home|B) files|C) documents|D) list|D 
+who is the founder of tesla?|A) elon musk|B) bill gate|C) donal trump|D) putin|A
+
