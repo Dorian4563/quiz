@@ -1,5 +1,4 @@
 #1/bin/bash
-#!/bin/bash
 
 QFILE="questions.txt"
 HIGHSCORES="highscores.txt"
