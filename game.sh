@@ -75,13 +75,30 @@ read -r -p "Press ENTER to start..."
 if command -v shuf >/dev/null 2>&1; then
     mapfile -t ALLQUESTIONS < <(shuf "$QFILE")
 else
-    mapfile -t ALLQUESTIONS < <(sort -R "$QFILE")
+ALLQUESTIONS=()
+
+if command -v shuf >/dev/null 2>&1; then
+    while IFS= read -r line; do
+        ALLQUESTIONS+=("$line")
+    done < <(shuf "$QFILE")
+else
+    while IFS= read -r line; do
+        ALLQUESTIONS+=("$line")
+    done < <(sort -R "$QFILE")
 fi
 
+
+QUESTIONS=()
+
 if [[ "$LIMIT" -gt 0 ]]; then
-    mapfile -t QUESTIONS < <(printf "%s\n" "${ALLQUESTIONS[@]:0:LIMIT}")
+    for ((i=0; i<${#ALLQUESTIONS[@]} && i<LIMIT; i++)); do
+        QUESTIONS+=("${ALLQUESTIONS[i]}")
+    done
 else
-    mapfile -t QUESTIONS < <(printf "%s\n" "${ALLQUESTIONS[@]}")
+    QUESTIONS=("${ALLQUESTIONS[@]}")
+fi
+
+    mapfile -t QUESTIONS < <(printf "%s\n" "${QUESTIONS[@]}")
 fi
 
 TOTAL=${#QUESTIONS[@]}
@@ -118,7 +135,7 @@ for LINE in "${QUESTIONS[@]}"; do
         continue
     fi
 
-    INPUT=${INPUT^^}
+INPUT=$(echo "$INPUT" | tr '[:lower:]' '[:upper:]')
 
     if [[ "$INPUT" == "E" ]]; then
         echo "Exiting game..."
